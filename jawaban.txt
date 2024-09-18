@@ -1,0 +1,12 @@
+task 1
+
+hitung nilai 
+total produksi selama seminggu
+rata rata produksi harian
+overtime (akan bernilai 0 jika tidak ada)
+
+selain hari senin dan kamis akan di set nilai rata rata
+kemudian  
+hari senin dan kamis di set nilai rata rata + (overtime / 2 hari kamis n senin)
+
+tambah kondisi jika overtime bernilai ganjil maka hari senin tambah 1 
