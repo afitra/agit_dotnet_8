@@ -49,4 +49,19 @@ public class Production_controller : Basic_controller
             return Make_error_response(e);
         }
     }
+
+    [HttpGet("task2/view")]
+    public async Task<IActionResult> Con_view_data()
+    {
+        try
+        {
+            var result = await _use_production.Use_get_data_production();
+            return View(result);
+        }
+        catch (Exception e)
+        {
+            return Make_error_response(e);
+        }
+    }
+
 }

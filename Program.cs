@@ -42,6 +42,8 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
 });
 // END auto register controller
 
+builder.Services.AddRazorPages();
+
 // START auto register usecase dan repository
 builder.Services.AddScoped<IN_use_production, Use_production>();
 builder.Services.AddScoped<IN_rep_production, Rep_production>();

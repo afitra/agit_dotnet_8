@@ -36,4 +36,13 @@ public class Rep_production : IN_rep_production
         var result = await _connection.DB.ExecuteAsync(query);
         return result > 0;
     }
+
+    public async Task<Mod_base_production[]> Rep_production_get_all()
+    {
+        var query = $"SELECT * FROM {_table};";
+        _basic_logger.Create_sql_log(_source, _type_log, query);
+        var result = await _connection.DB.QueryAsync<Mod_base_production>(query);
+
+        return result.ToArray();
+    }
 }

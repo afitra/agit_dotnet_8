@@ -1,10 +1,10 @@
 CREATE TABLE production (
-    id INT IDENTITY(1,1) PRIMARY KEY,
+    id INT IDENTITY(1,1) PRIMARY KEY
     senin INT,
     selasa INT,
     rabo INT,
     kamis INT,
-    jumaat INT,
+    jumat INT,
     sabtu INT,
     minggu INT,
     remap_senin INT,

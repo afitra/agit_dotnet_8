@@ -121,6 +121,13 @@ public class Use_production : IN_use_production
         return _basic_response.Reverse_success_data_response(
             Basic_code.Http_code_general, Basic_message.Message_login_success, payload);
     }
+
+    public async Task<Mod_base_production[]> Use_get_data_production()
+    {
+        var result = await _repository_production.Rep_production_get_all();
+
+        return result;
+    }
 }
 
 

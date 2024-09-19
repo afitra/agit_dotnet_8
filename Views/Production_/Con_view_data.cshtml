@@ -1,0 +1,63 @@
+@model IEnumerable<agit.Api.Models.Mod_base_production>
+
+@{
+ViewData["Title"] = "Data Produksi";
+}
+
+<h2 class="my-4">Data Produksi</h2>
+
+<style>
+    table.table-bordered, table.table-bordered th, table.table-bordered td {
+        border: 2px solid black;  
+    }
+    th, td {
+        text-align: center; 
+        padding: 10px; 
+    }
+</style>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Senin</th>
+        <th scope="col">Selasa</th>
+        <th scope="col">Rabo</th>
+        <th scope="col">Kamis</th>
+        <th scope="col">Jumat</th>
+        <th scope="col">Sabtu</th>
+        <th scope="col">Minggu</th>
+        <th scope="col">Remap Senin</th>
+        <th scope="col">Remap Selasa</th>
+        <th scope="col">Remap Rabo</th>
+        <th scope="col">Remap Kamis</th>
+        <th scope="col">Remap Jumat</th>
+        <th scope="col">Remap Sabtu</th>
+        <th scope="col">Remap Minggu</th>
+        <th scope="col">Created At</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.Senin</td>
+        <td>@item.Selasa</td>
+        <td>@item.Rabo</td>
+        <td>@item.Kamis</td>
+        <td>@item.Jumat</td>
+        <td>@item.Sabtu</td>
+        <td>@item.Minggu</td>
+        <td>@item.Remap_senin</td>
+        <td>@item.Remap_selasa</td>
+        <td>@item.Remap_rabo</td>
+        <td>@item.Remap_kamis</td>
+        <td>@item.Remap_jumat</td>
+        <td>@item.Remap_sabtu</td>
+        <td>@item.Remap_minggu</td>
+        <td>@item.Created_at.ToString("MMMM dd, yyyy hh:mm tt")</td>
+    </tr>
+    }
+    </tbody>
+</table>
