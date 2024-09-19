@@ -34,4 +34,19 @@ public class Production_controller : Basic_controller
             return Make_error_response(e);
         }
     }
+
+    [HttpPost("task2")]
+    public async Task<IActionResult> Con_find_user_by_id([FromBody] Req_task2 request)
+    {
+        try
+        {
+            if (!ModelState.IsValid) return Make_validator_error_response(ModelState);
+            var result = await _use_production.Use_post_task2(request);
+            return Make_sucess_response(result);
+        }
+        catch (Exception e)
+        {
+            return Make_error_response(e);
+        }
+    }
 }

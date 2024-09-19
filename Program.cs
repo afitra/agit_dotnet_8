@@ -4,6 +4,7 @@ using agit.Api.Connection;
 using agit.Api.Helpers;
 using agit.Api.Interface;
 using agit.Api.Middlewares;
+using agit.Api.Repossitory;
 using agit.Api.Usecase;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.OpenApi.Models;
@@ -43,6 +44,7 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
 
 // START auto register usecase dan repository
 builder.Services.AddScoped<IN_use_production, Use_production>();
+builder.Services.AddScoped<IN_rep_production, Rep_production>();
 // END auto register usecase dan repository
 
 var app = builder.Build();
